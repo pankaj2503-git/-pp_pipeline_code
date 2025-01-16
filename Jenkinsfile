@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'ec2-agent' } // Replace with your EC2 agent's label
+    agent any // Replace with your EC2 agent's label
 
     environment {
         DOCKER_IMAGE = 'node-app' // Replace with your desired image name
@@ -9,7 +9,7 @@ pipeline {
         stage('Clone Repository') {
             steps {
                 echo 'Cloning repository...'
-                git branch: 'main', url: 'https://github.com/techpatel197/kp_shark_project.git'
+                git branch: 'main', url: 'https://github.com/pankaj2503-git/pp_project.git'
                 // Replace with your GitHub repository URL and branch name
             }
         }
